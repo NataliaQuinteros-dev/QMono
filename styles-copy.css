@@ -12,7 +12,7 @@
 }
 nav{
     background-color: black;
-    width: 100vw;
+        width: 100vw;
     grid-area: navegador;
     
 }
@@ -31,6 +31,18 @@ li a{
     padding-left: 5px;
     padding-right: 5px;
     font-family: "Merienda", cursive;
+}
+
+.navegador a:hover{
+    color: red;
+}
+
+.navegador a:active{
+    color: red;
+}
+
+.activo{
+    color: red;
 }
 
 main{

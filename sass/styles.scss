@@ -1,0 +1,194 @@
+@import 'variables';
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+
+    header{
+        .barraLogo{
+            height: 25vh;
+            width: 100vw;
+            text-align: center;
+            background-color: $color-primario;
+            grid-area: barraLogo;
+            
+        }
+        nav{
+            background-color: black;
+            width: 100vw;
+            grid-area: navegador;
+            ul{
+                list-style-type: none;
+                text-align: center;
+                li{
+                    display: inline;
+                }
+            }
+            a{
+                text-decoration: none;
+                text-align: center;
+                color: aliceblue;
+                font-size: 1.75em;
+                padding-left: 5px;
+                padding-right: 5px;
+                font-family: "Merienda", cursive;
+            }
+        
+            .navbar-brand{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .navegador{
+                grid-area: navegador;
+                ul{
+                    margin: 0;
+                }
+            }
+            .navbar-toggler-icon {
+                background-color: white;
+                }
+
+        }
+
+    }
+    main{
+        background-color: #E3E8E6;
+        font-family: "Satisfy", cursive;
+        font-size: 1.25em;
+        width: 100vw;
+        h1{
+            font-size: 2em;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1,h2,p{
+            padding-left: 10px;
+        }
+        li{
+            padding-left: 20px;
+        }
+
+        .mainIndex{
+            display: flex;
+            flex-direction: row;
+            grid-area: mainIndex;
+            padding-left: 0px;
+            margin: 0;
+    
+            #imagenBienvenida{
+                border-radius: 4px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin: 10px;
+            }
+
+            .textoBienvenida{
+                padding-left: 10px;
+                li{
+                    list-style-type: none;
+                }
+            }
+        }
+        .containerPedidos{
+            display: grid;
+            grid-template-areas: 
+            "barraLogo barraLogo"
+            "navegador navegador"
+            "mainHacerPedido mainHacerPedido"
+            "footer footer"
+            ;
+            width: 100vw;
+            .mainHacerPedido{
+                grid-area: mainHacerPedido;
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                .comoHacerPedido{
+                    padding-left: 30px;
+                }
+                .comoSaberTalle{
+                    padding-left: 30px;
+                }
+            }
+        }
+        .row img{
+            border-radius: 10px;
+            margin: 20px;
+            border: solid;
+
+        }
+        .contacto{
+            iframe{
+                padding-left: 30px;
+            }
+            a{
+                text-decoration:none;
+                color: $color-primario;
+            }
+        }
+    }
+    
+    footer{
+        display: flex;
+        justify-content: space-between;
+        background-color: $color-primario;
+        font-family:monospace;
+        font-size: 14px;
+        padding-right: 10px;
+        grid-area: footer;   
+        margin: 0;
+        width: 100vw;
+        p{
+            margin: 5px;
+        }
+        #logoInstagram{
+            width: 30px;
+        }
+    }
+}
+
+@mixin display-styles($display, $flex-direction, $margin){
+    display: $display;
+    flex-direction: $flex-direction;
+    margin: $margin;
+}
+@media (max-width: 1040px) {
+.mainIndex{
+    @include display-styles(flex, column, 0);
+}
+.tablaDeTalles img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 10px 10px 10px 10px;
+    }
+.row img{
+    width: 300px;
+}
+}
+
+@media (max-width: 560px) {
+.mainIndex{
+    @include display-styles(flex,column, 0);
+}
+.row img{
+    width: 250px;
+}
+.contacto{
+    iframe{
+        width: 300px;
+    }
+}
+}
+
+@media (min-width:1041px) {
+.mainIndex{
+    @include display-styles(flex, row, 0);
+}
+.row img{
+    width: 500px;
+}
+}

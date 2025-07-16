@@ -143,19 +143,21 @@ body{
             margin: 5px;
         }
         #logoInstagram{
-            width: 30px;
+            width: 3vw;
+            margin-top: 10px;
         }
     }
 }
 
-@mixin display-styles($display, $flex-direction, $margin){
+@mixin display-styles($display, $flex-direction, $margin, $text-align){
     display: $display;
     flex-direction: $flex-direction;
     margin: $margin;
+    text-align: $text-align;
 }
 @media (max-width: 1040px) {
 .mainIndex{
-    @include display-styles(flex, column, 0);
+    @include display-styles(flex, column, 0, center);
 }
 .tablaDeTalles img{
     display: flex;
@@ -168,11 +170,31 @@ body{
 .row img{
     width: 300px;
 }
+body{
+    header{
+        .barraLogo{
+            height: 15vh;
+            width: 100vw;
+            img{
+                width: 120px;
+            }
+        }
+    }
+}
+body{
+    footer{
+        #logoInstagram{
+            width: 4vw;
+            margin-top: 20px;
+        }
+    }
+}
+
 }
 
 @media (max-width: 560px) {
 .mainIndex{
-    @include display-styles(flex,column, 0);
+    @include display-styles(flex,column, 0, center);
 }
 .row img{
     width: 250px;
@@ -182,13 +204,32 @@ body{
         width: 300px;
     }
 }
+body{
+    header{
+        .barraLogo{
+            height: 15vh;
+            width: 100vw;
+                img{
+                    width: 100px;
+                }
+        }
+
+    }
+    footer{
+        #logoInstagram{
+            width: 10vw;
+            margin-top: 10px;
+        }
+    }
+}
 }
 
 @media (min-width:1041px) {
 .mainIndex{
-    @include display-styles(flex, row, 0);
+    @include display-styles(flex, row, 0, center);
 }
 .row img{
     width: 500px;
 }
+
 }

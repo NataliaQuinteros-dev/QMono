@@ -95,6 +95,9 @@ body main .containerPedidos .mainHacerPedido {
 body main .containerPedidos .mainHacerPedido .comoHacerPedido {
   padding-left: 30px;
 }
+body main .containerPedidos .mainHacerPedido .tablaDeTalles img {
+  justify-content: center;
+}
 body main .containerPedidos .mainHacerPedido .comoSaberTalle {
   padding-left: 30px;
 }
@@ -194,4 +197,6 @@ body footer #logoInstagram {
   .row img {
     width: 500px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
